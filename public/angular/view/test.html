@@ -1,0 +1,77 @@
+
+  <div class="col33 bgblue " ng-controller="logincontroller">
+<!--   <h1 class="text-center white">Welcome </h1>
+  <h1 class="text-center white">to </h1> -->
+<h1 class="text-center white" style="border-bottom: 1px solid #fff;padding-bottom: 10px;align-self: center">Welcome To My App</h1>
+  
+
+  <div class="col22" style="padding-left:24%;padding-right: 24%;">
+        <md-content>
+    <md-tabs md-dynamic-height md-border-bottom md-selected="selectedIndex">
+    <!-- LOGIN STARTS -->
+      <md-tab label="Login" md-on-select="onTabChanges(1)" >
+        <md-content class="md-padding1">
+      <ng-form name="carrymodelLoginForm" novalidate >
+  
+        <div  class="profile-pic">
+               <img  class="img-circle_login" ng-src="{{uploadImg}}"  alt="">
+        </div>
+
+        <div class="logincontainer">
+        <div class="row">
+          <div class="col-md-12 col-sm-12 col-xs-12">
+              <md-input-container class="md-block fg-line">
+
+                      <label>E-mail ID</label>
+                      <md-icon class="md-default-theme material-icons"><i class="material-icons">email</i></md-icon> 
+                      <input focus-me required  tabindex="1" type="email" autocomplete="off" name="email"  ng-model="carrymodel.email"  ng-pattern="/^.+@.+\..+$/"  >
+                      
+                      
+                     
+              </md-input-container>
+            </div>
+          </div>
+      
+        <div class="row">
+          <div class="col-md-12 col-sm-12 col-xs-12">
+              <md-input-container class="md-block">
+                      <label>Password</label>
+
+                      <md-icon class="md-default-theme material-icons"><i class="zmdi zmdi-lock-outline" aria-hidden="true"></i></md-icon>
+                      <input required  name="password"   type="password" ng-model="carrymodel.password" >
+
+                      
+              </md-input-container>
+          </div>
+        </div>
+        </div>
+        <div class="row" >
+            <div class="col-md-12 col-sm-12 col-xs-12">
+              <!-- <div class="g-recaptcha pull-right" data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"></div> -->
+            </div>
+        </div>
+
+            <!-- <pre>{{carrymodelLoginForm.email.$pristine |json}}</pre> -->
+            <div layout="row" layout-xs="column"> 
+                
+                
+                <div flex class="text-center">
+
+                
+
+                     <md-button style="margin-left:72px" class="md-raised md-primary" ng-click="loginverified(carrymodel)"  ng-disabled="!carrymodelLoginForm.$valid">Login</md-button>  
+
+
+
+                     <div class="clearboth"></div>
+                                  
+                </div>
+            </div>           
+
+           
+
+
+      </ng-form>
+
+  </div>
+
